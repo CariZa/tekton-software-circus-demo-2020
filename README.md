@@ -88,6 +88,10 @@ EOF
     01-pipeline.yaml - single task
     02-pipeline.yaml - multiple tasks
 
+Commands:
+
+    $ kubectl apply -f ./02-pipeline-examples
+
 01-pipeline.yaml - single task
 
 ```yaml
