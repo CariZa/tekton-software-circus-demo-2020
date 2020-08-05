@@ -14,11 +14,11 @@ https://github.com/tektoncd/dashboard/blob/master/docs/install.md
 
 For minikube you can just run these (no special permission required):
 
-Pipelines
+Apply Pipelines to cluster
 
     $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
 
-Dashboard
+Apply Dashboard to cluster
 
     $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/dashboard/latest/tekton-dashboard-release.yaml
 
