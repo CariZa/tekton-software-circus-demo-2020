@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: 02-task-funbox-demo-with-result
+spec:
+  results:
+    - name: cowactuallysays
+      description: "The cow actually says"
+  steps:
+  - name: funbox-fortune
+    image: wernight/funbox
+    script: |
+      #!/usr/bin/env bash 
+      fortune | tee /tekton/results/cowactuallysays
+  - name: cowsays
+    image: wernight/funbox
+    script: |
+      #!/usr/bin/env bash 
+      cowsay $(cat /tekton/results/cowactuallysays)

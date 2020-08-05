@@ -1,0 +1,17 @@
+
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: 01-demo-git-pipeline
+spec:
+  resources:
+  - name: workspace
+    type: git
+  tasks:
+  - name: fetch-from-git
+    taskRef:
+      name: 03-task-git-repo
+    resources:
+      inputs:
+        - name: workspace
+          resource: workspace

@@ -1,0 +1,16 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: 01-task-funbox-demo
+spec:
+  params:
+  - name: PASS_VALUE_INTO_TASK
+    type: string
+    default: "I'm not set yet"
+  steps:
+  - name: cowsays
+    image: wernight/funbox
+    command:
+    - cowsay
+    args:
+    - $(params.PASS_VALUE_INTO_TASK)

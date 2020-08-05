@@ -1,0 +1,20 @@
+
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: 02-demo-multiple-tasks
+spec:
+  resources:
+  - name: workspace
+    type: git
+  tasks:
+  - name: fetch-from-git
+    taskRef:
+      name: 03-task-git-repo
+    resources:
+      inputs:
+        - name: workspace
+          resource: workspace
+  - name: run-funbox
+    taskRef:
+      name: 02-task-funbox-demo-with-result

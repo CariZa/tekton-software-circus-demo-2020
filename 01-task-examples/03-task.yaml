@@ -1,0 +1,25 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: git-empty-hello-image
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/cariza/empty-hello-image
+
+---
+
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: 03-task-git-repo
+spec:
+  resources:
+    inputs:
+      - name: workspace
+        type: git
+  steps:
+    - name: readme
+      image: ubuntu
+      script: cat workspace/README.md
