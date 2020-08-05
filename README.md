@@ -138,3 +138,9 @@ https://github.com/tektoncd/triggers/tree/master/examples
 I've got some old examples, but from a while ago, so they might be a bit outdated:
 
 https://github.com/CariZa/tekton-examples
+
+I also wrote some stuff to help learn Kaniko
+
+https://github.com/CariZa/kaniko-walkthrough
+
+(It's a work in progress, but hopefully can help a bit with getting started with kaniko)
