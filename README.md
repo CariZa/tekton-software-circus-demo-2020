@@ -45,7 +45,7 @@ spec:
     name: 01-task-funbox-demo
   params:
     - name: PASS_VALUE_INTO_TASK
-      value: "Custome value set"
+      value: "Custom value set"
 EOF
 ```
 
@@ -128,6 +128,10 @@ spec:
 EOF
 ```
 ## Keep going
+
+Here are some examples you can work through on the Tekton Pipelines repo:
+
+https://github.com/tektoncd/pipeline/tree/master/examples
 
 Take a look at Tekton Triggers and see if you can get triggers working:
 
