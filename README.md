@@ -22,6 +22,12 @@ Apply Dashboard to cluster
 
     $ kubectl apply --filename https://storage.googleapis.com/tekton-releases/dashboard/latest/tekton-dashboard-release.yaml
 
+Portfoward the dashboard pod:
+
+    $ kubectl get pods -n tekton-pipelines
+
+    $ kubectl port-forward <DASHBOARD_POD_NAME> 9097:9097 -n tekton-pipelines
+
 ### 01-task-examples
 
     task-01.yaml - single step
