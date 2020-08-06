@@ -28,6 +28,8 @@ Portfoward the dashboard pod:
 
     $ kubectl port-forward <DASHBOARD_POD_NAME> 9097:9097 -n tekton-pipelines
 
+You should now be able to view the dashboard at http://localhost:9097
+
 ### 01-task-examples
 
     task-01.yaml - single step
